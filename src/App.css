@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Lato&family=Open+Sans&family=Poppins&family=Uchen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form_container {
+  background-color: hsl(185, 75%, 39%);
+  width: 22rem;
+  border-radius: 0.9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
+.form_container header {
+  transform: translateY(0.8rem);
+  width: 8rem;
+  height: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form_container header img {
+  height: 100%;
+  width: 100%;
+}
+
+.form_container form {
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.form_container form::before {
+  content: "Log In to topibro.";
+  font-size: 26px;
+  font-weight: bolder;
+  white-space: nowrap;
+  color: #070d59;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form label {
+  color: #fff;
+  letter-spacing: 1.2px;
+  text-emphasis-color: none;
+  text-shadow: none;
+  font-weight: bolder;
+  float: left;
+}
+
+form input {
+  /* height: 40px; */
+  width: 100%;
+  border: 1px solid #3c415e;
+  border-radius: 4px;
+  margin-block-start: 6px;
+  /* margin-block-end: 26px; */
+  font-family: "jost", sans-serif;
+  padding-inline: 16px;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+}
+
+form input:active,
+form input:focus {
+  outline: none;
+  border: none;
+  padding-left: 16px;
+  font-family: "jost", sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+}
+
+form input:last-child {
+  margin-top: 14px;
+  background-color: #070d59;
+  letter-spacing: 2.2px;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #f3f9fb;
+  border: none;
+  outline: none;
+  padding: 0.4rem 1.2rem;
+}
+
+form input:last-child:hover {
+  cursor: pointer;
+}
+
+/* Second Card */
+
+.card {
+  padding: 15px;
+  width: 350px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  font-family: Montserrat;
+  user-select: none;
+}
+
+.cover-photo {
+  position: relative;
+  background: url(components/bg-pattern-card.svg);
+  background-size: cover;
+  height: 180px;
+  border-radius: 5px 5px 0 0;
+}
+
+.profile {
+  position: absolute;
+  width: 120px;
+  bottom: -60px;
+  left: 15px;
+  border-radius: 50%;
+  border: 2px solid hsl(185, 75%, 39%);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+  background: hsl(185, 75%, 39%);
+  padding: 5px;
+}
+
+.profile-name {
+  font-size: 20px;
+  margin: 25px 0 0 120px;
+  color: hsl(185, 75%, 39%);
+}
+
+.about {
+  color: hsl(227, 10%, 46%);
+  font-weight: bolder;
+  margin-top: 30px;
+  line-height: 1.6;
+  text-shadow: 0 2px 2px hsl(185, 75%, 39%);
+}
+
+.btn {
+  margin: 30px 15px;
+  background: transparent;
+  border: 1px solid hsl(185, 75%, 39%);
+  color: hsl(185, 75%, 39%);
+  padding: 10px 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family: Montserrat;
+  cursor: pointer;
+  color: #222;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: hsl(185, 75%, 39%);
+  color: #222;
 }
